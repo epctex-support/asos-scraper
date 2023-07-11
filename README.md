@@ -1,3 +1,5 @@
+[https://apify.com/epctex/asos-scraper](https://apify.com/epctex/asos-scraper?fpr=yhdrb)
+
 # Actor - Asos Scraper
 
 ## Asos scraper
@@ -6,21 +8,21 @@ Since Asos doesn't provide an API, this actor should help you to retrieve data f
 
 The Asos data scraper supports the following features:
 
-- Scrape product details - You can scrape attributes like images, pricing, variants, colors and all kinds of metadata.
+- Scrape product details - You can scrape attributes like images, pricing, variants, colors, and all kinds of metadata.
 
-- Scrape any categories - Pick your category, select any filters as you like and scrape all the products that is showing up.
+- Scrape any categories - Pick your category, select any filters as you like, and scrape all the products that are showing up.
 
 - Scrape and search by keyword - Actor supports built-in keyword search in Asos. You can search any keyword and retrieve all the results.
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/asos-scraper/issues).
 
-## Need to find product pairs between Walmart and another online shop?
+## Need to find product pairs between Asos and another online shop?
 
 Use the [AI Product Matcher](https://apify.com/equidem/ai-product-matcher?fpr=yhdrb)🔗. This AI model allows you to compare items from different web stores, identifying exact matches and comparing real-time data obtained via web scraping. 
 
-With the AI Product Matcher, you can use scraped product data to monitor product matches across the industry, implement dynamic pricing for your website, replace or complement manual mapping, and obtain realistic estimates against your competition for upcoming promo campaigns. Most importantly, it is relatively easy to get started with (just follow [this guide](https://blog.apify.com/product-matching-ai-pricing-intelligence-web-scraping/)) and is able to **match thousands of product pairs**.
+With the AI Product Matcher, you can use scraped product data to monitor product matches across the industry, implement dynamic pricing for your website, replace or complement manual mapping, and obtain realistic estimates against your competition for upcoming promo campaigns. Most importantly, it is relatively easy to get started with (just follow [this guide](https://blog.apify.com/product-matching-ai-pricing-intelligence-web-scraping/)) and can **match thousands of product pairs**.
 
 ## Input Parameters
 
@@ -28,17 +30,17 @@ The input of this scraper should be JSON containing the list of pages on Asos th
 
 - `search`: (Optional) (String) Keyword that you want to search on Asos.
 
-- `startUrls`: (Optional) (Array) List of Asos URLs. You should only provide product detail, search or listing URLs.
+- `startUrls`: (Optional) (Array) List of Asos URLs. You should only provide product detail, search, or listing URLs.
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
 
 - `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
 
 - `proxy`: (Required) (Proxy Object) Proxy configuration.
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
 
-- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
+- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
@@ -48,11 +50,11 @@ When you want to have a scrape over a specific item URL, just copy and paste the
 
 If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
 
-With the last approach that explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
 
 ### Compute Unit Consumption
 
-The actor optimized to run blazing fast and scrape many as items as possible. Therefore, it forefronts all item detail requests. If actor doesn't block very often it'll scrape 100 items in 1 minute with ~0.04-0.08 compute units.
+The actor is optimized to run blazing fast and scrape many as items as possible. Therefore, it forefronts all item detail requests. If the actor doesn't block very often it'll scrape 100 items in 1 minute with ~0.04-0.08 compute units.
 
 ### Asos Scraper Input example
 
@@ -79,14 +81,13 @@ The actor optimized to run blazing fast and scrape many as items as possible. Th
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of
-what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## Asos Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Asos actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Asos actor.
 
 ## Scraped Asos Products
 The structure of each item in Asos products looks like this:
@@ -998,4 +999,4 @@ The structure of each item in Asos products looks like this:
 ```
 
 ## Contact
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
